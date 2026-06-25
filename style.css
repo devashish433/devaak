@@ -1,0 +1,103 @@
+/* --- FORCE-HIDE SHOPIFY HEADERS, FOOTERS & UTILITY BARS --- */
+#shopify-section-header,
+#shopify-section-footer,
+#shopify-section-announcement-bar,
+.shopify-section-header,
+.shopify-section-footer,
+.shopify-section-group-header-group,
+.shopify-section-group-footer-group,
+header,
+footer,
+.site-header,
+.site-footer,
+.announcement-bar,
+.utility-bar {
+  display: none !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.main-content,
+main,
+#MainContent {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
+.luxury-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+.luxury-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --color-ivory-50: #FCFAF6;
+  --color-ivory-100: #FAF6EE;
+  --color-ivory-200: #F4EFE2;
+  --color-luxury-charcoal: #2C2621;
+  --color-luxury-charcoal-muted: #615851;
+  --color-gold-400: #dfc27d;
+  --color-gold-500: #cfa152;
+  --color-gold-600: #b5843b;
+  --vh: 1vh;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--color-ivory-100) !important;
+  color: var(--color-luxury-charcoal);
+  font-family: 'Cormorant Garamond', serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Elegant customized scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory-200);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold-600);
+  border-radius: 3px;
+}
+
+/* Fixed Deck container responsive height adjustments */
+.fixed-display-deck {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.fade-transition-custom {
+  will-change: opacity, transform;
+  transition: none; /* Controlled continuously by JS for performance */
+}
+
+/* Absolute Placement of Date Elements using dynamic viewport heights */
+#text_save_the_date {
+  top: calc(var(--vh, 1vh) * 12);
+}
+#date_block_day {
+  top: calc(var(--vh, 1vh) * 26);
+}
+#date_block_month {
+  top: calc(var(--vh, 1vh) * 41);
+}
+#date_block_year {
+  top: calc(var(--vh, 1vh) * 56);
+}
+#scroll_instruction {
+  bottom: calc(var(--vh, 1vh) * 8);
+}
